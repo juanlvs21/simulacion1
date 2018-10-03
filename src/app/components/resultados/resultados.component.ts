@@ -17,47 +17,4 @@ export class ResultadosComponent implements OnInit {
     this.rs.generarTR1();
   }
 
-  prueba = [
-    {
-      a:'a1',
-      b:'b1',
-      c:'c1'
-    },
-    {
-      a:'a1',
-      b:'b1',
-      c:'c2'
-    },
-    {
-      a:'a1',
-      b:'b2',
-      c:'c1'
-    },
-    {
-      a:'a1',
-      b:'b2',
-      c:'c2'
-    },
-    {
-      a:'a2',
-      b:'b1',
-      c:'c1'
-    },
-    {
-      a:'a2',
-      b:'b1',
-      c:'c2'
-    },
-    {
-      a:'a2',
-      b:'b2',
-      c:'c1'
-    },
-    {
-      a:'a2',
-      b:'b2',
-      c:'c2'
-    },
-  ]
-
 }

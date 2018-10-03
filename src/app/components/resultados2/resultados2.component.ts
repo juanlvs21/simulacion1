@@ -11,6 +11,7 @@ export class Resultados2Component implements OnInit {
   constructor( public rs:ResultadoService ) { }
 
   ngOnInit() {
+    // console.log(this.rs.tablar2)
   }
 
 }

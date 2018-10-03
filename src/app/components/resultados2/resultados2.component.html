@@ -4,65 +4,136 @@
             <div class="card-body">
                 <div class="text-left" style="float:left">
                     <button class="btn btn-outline-danger" [routerLink]="['/resultados']">Atras</button>
+                    <button class="btn btn-outline-success" [routerLink]="['/metodos']">Cambiar método</button>
                 </div>
                 <div class="text-right" style="float:right">
-                    <button class="btn btn-outline-primary" [routerLink]="['/resultados2']">Siguiente</button>
+                    <button class="btn btn-outline-primary" [routerLink]="['/histograma']">Siguiente</button>
                 </div>
                 <div class="text-center">
-                    <h1>Tablas de Resultados</h1>
+                    <h1>Interrogantes Resueltas</h1>
                 </div>
                 <div class="mt-3">
                     <div class="row">
-                        <div class="col-md-8 text-center">
-                            <h6>
-                                <b>Tabla Resultado #2 <small>(Basandose en los datos de la tabla anterior)</small></b>
-                                <!-- <button class="btn btn-success btn-sm" (click)="generarTR1()" style="margin-left:20px">Generar</button> -->
-                            </h6>
-                            <table class="table table-sm table-bordered">
-                                <thead class="thead-dark">
-                                    <tr>
-                                        <th scope="col">Tipo de Carga</th>
-                                        <th scope="col">Kilográmos</th>
-                                        <th scope="col">rn+1</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr *ngFor="let tr2 of rs.tablar2">
-                                        <th rowspan="7" *ngIf="tr2.n == 1"> {{ tr2.tipo }} </th>
-                                        <th> {{ tr2.kg }} </th>
-                                        <!-- <th> {{ tr1.rn | number:'1.3' }} </th> -->
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <!-- <div class="col-md-4 text-center">
-                            <div class="col-md-12 mt-5">
+                        <div class="col-md-6 text-center">
+                            <div class="col-md-12">
                                 <h6>
                                     <b>¿Qué cantidad de camiones por tipo de carga llegaron a la terminal en los días de la simulación?</b>
                                 </h6>
                                 <table class="table table-sm table-bordered">
                                     <thead class="thead-dark">
                                         <tr>
-                                            <th scope="col">Carga Tipo A</th>
-                                            <th scope="col">Carga Tipo B</th>
-                                            <th scope="col">Carga Tipo C</th>
+                                            <th scope="col">Tipo A</th>
+                                            <th scope="col">Tipo B</th>
+                                            <th scope="col">Tipo C</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <th> {{rs.r1A | number:'2.'}} </th>
-                                            <th> {{rs.r1B | number:'2.'}} </th>
-                                            <th> {{rs.r1C | number:'2.'}} </th>
+                                            <th style="background: #5070c9 ;"> {{rs.r1A | number:'2.'}} </th>
+                                            <th style="background: #5070c9 ;"> {{rs.r1B | number:'2.'}} </th>
+                                            <th style="background: #5070c9 ;"> {{rs.r1C | number:'2.'}} </th>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="col-md-12 mt-5">
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <div class="col-md-12">
                                 <h6>
-                                    <b>¿Cuántas horas extras totales fueron trabajadas por las cuadrillas en el experimento? </b>
+                                    <b>¿Cuántas horas extras totales fueron trabajadas por las cuadrillas en el experimento?</b>
                                 </h6>
+                                <table class="table table-sm table-bordered">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th scope="col">Horas Totales</th>
+                                            <!-- <th scope="col">Horas Contrato (8h/día)</th> -->
+                                            <th scope="col">Horas Extras</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th> {{rs.horastotal | number:'2.0-1'}} </th>
+                                            <!-- <th> {{rs.horasdia | number:'2.0-1'}} </th> -->
+                                            <th style="background: #5070c9 ;"> {{rs.horasextra | number:'2.0-1'}} </th>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                        </div> -->
+                        </div>
+                        <div class="offset-md-2  mt-4">
+                            <h6>
+                                <b>¿Cuál fue el costo generado por pago a las cuadrillas que tiene que cancelar la compañía?</b>
+                            </h6>
+                        </div>
+                        <div class="col-md-6 mt-2">
+                            <div class="col-md-12">
+                                <div class="text-center">
+                                    <p><b>Pago Contrato</b></p>
+                                </div>
+                                <table class="table table-sm table-bordered">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th scope="col">Operador Elevador (x3)</th>
+                                            <th scope="col">Obreros (x6)</th>
+                                            <th scope="col">Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th> {{rs.hc.operador | number:'.0-2' }} </th>
+                                            <th> {{rs.hc.obrero | number:'.0-2'}} </th>
+                                            <th> {{rs.hc.total | number:'.0-2'}} </th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mt-2">
+                            <div class="col-md-12">
+                                <div class="text-center">
+                                    <p><b>Pago Horas Extras</b></p>
+                                </div>
+                                <table class="table table-sm table-bordered">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th scope="col">Operador Elevador (x3)</th>
+                                            <th scope="col">Obreros (x6)</th>
+                                            <th scope="col">Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th> {{rs.he.operador | number:'.0-2'}} </th>
+                                            <th> {{rs.he.obrero | number:'.0-2'}} </th>
+                                            <th> {{rs.he.total | number:'.0-2'}} </th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="col-md-12">
+                                <div class="text-center">
+                                    <p><b>Pago Total</b></p>
+                                </div>
+                                <table class="table table-sm table-bordered">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th scope="col">Operador Elevador Total</th>
+                                            <th scope="col">Obreros Total</th>
+                                            <th scope="col">Pago Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th> {{rs.ht.operador | number:'.0-2'}} </th>
+                                            <th> {{rs.ht.obrero | number:'.0-2'}} </th>
+                                            <th style="background: #5070c9 ;"> {{rs.ht.total | number:'0.0-2'}} </th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
