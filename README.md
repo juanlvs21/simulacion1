@@ -1,27 +1,12 @@
 # Simulacion
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.3.
+Primer proyecto de la asignatura Simulación y modelos.
 
-## Development server
+## Problematica
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Los camiones llegan en forma aleatoria al terminal para descargar. Después de analizar los datos históricos se concluyó que el porcentaje de llegadas diarias sigue una distribución de poisson con una media de 3 camiones por día (Ver tabla #1). El peso (Kg) de la carga es un factor importante en lo referente al tiempo de descarga. Los registros pesados muestran que los pesos de la carga (independientemente el tipo) están distribuidos como lo indica la tabla #2. La cantidad de kilogramos por hora que una cuadrilla puede descargar también varía y es una función del tipo de carga. La probabilidad de cada tipo de carga y la velocidad de descarga por cada uno de estos se muestra en la tabla #3. La compuerta posee 3 cuadrilla en donde c/u consta de tres personas, un operador de elevador de carga a quien se le pega Bs. 3.000,00 la hora y dos obreros a quien se les paga a c/u Bs. 1.800,00 la hora. La política de la compañía es descargar los camiones un día después de su llegada y terminar toda la descarga iniciada de los camiones sin importar los costos de tiempo extra. El contrato del sindicato demanda una bonificación del 50% del valor de la hora por cada hora que exceda de las 8 trabajadas en el día.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Realice un experimento de simulación de 10 días para observar el comportamiento del sistema, dar respuestas a las siguientes interrogantes: 
+- ¿Qué cantidad de camiones por tipo de carga llegaron a la terminal en los días de la simulación? 
+- ¿Cuántas horas extras totales fueron trabajadas por las cuadrillas en el experimento?
+- ¿Cuál fue el costo generado por pago a las cuadrillas que tiene que cancelar la compañía?

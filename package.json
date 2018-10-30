@@ -7,7 +7,9 @@
         "build": "ng build",
         "test": "ng test",
         "lint": "ng lint",
-        "e2e": "ng e2e"
+        "e2e": "ng e2e",
+        "package-win": "electron-packager . Simulacion --overwrite --platform=win32 --arch=ia32 --icon=src/dist/favicon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron App\"",
+        "electron": "electron  main.js"
     },
     "private": true,
     "dependencies": {
@@ -36,6 +38,7 @@
         "angular-cli-ghpages": "^0.5.3",
         "codelyzer": "~4.2.1",
         "electron": "^3.0.2",
+        "electron-packager": "^12.1.2",
         "jasmine-core": "~2.99.1",
         "jasmine-spec-reporter": "~4.2.1",
         "karma": "^3.0.0",

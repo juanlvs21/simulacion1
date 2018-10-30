@@ -25,11 +25,11 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr *ngFor="let t1 of tabla1">
+                                    <tr *ngFor="let t1 of rs.tabla1">
                                         <th> {{ t1.camiones}} </th>
                                         <td> {{ t1.fx | number:'1.3' }} </td>
                                         <td> {{ t1.fx2 | number:'1.3' }} </td>
-                                        <td> {{ t1.ic}} </td>
+                                        <td> {{ t1.ic1 | number:'3.' }} - {{ t1.ic2 | number:'3.' }}</td>
                                     </tr>
                                 </tbody>
                             </table>

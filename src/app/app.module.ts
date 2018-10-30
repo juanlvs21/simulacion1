@@ -16,6 +16,8 @@ import { ResultadosComponent } from './components/resultados/resultados.componen
 import { Resultados2Component } from './components/resultados2/resultados2.component';
 import { MetodosComponent } from './components/metodos/metodos.component';
 import { HistogramaComponent } from './components/histograma/histograma.component';
+import { Resultados3Component } from './components/resultados3/resultados3.component';
+import { Resultado4Component } from './components/resultado4/resultado4.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { HistogramaComponent } from './components/histograma/histograma.componen
     ResultadosComponent,
     Resultados2Component,
     MetodosComponent,
-    HistogramaComponent
+    HistogramaComponent,
+    Resultados3Component,
+    Resultado4Component
   ],
   imports: [
     BrowserModule,

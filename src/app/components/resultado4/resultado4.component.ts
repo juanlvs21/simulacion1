@@ -2,12 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ResultadoService } from '../../services/resultado.service'
 
 @Component({
-  selector: 'app-tablas',
-  templateUrl: './tablas.component.html',
+  selector: 'app-resultado4',
+  templateUrl: './resultado4.component.html',
   styles: []
 })
-export class TablasComponent implements OnInit {
-  
+export class Resultado4Component implements OnInit {
 
   constructor( public rs:ResultadoService ) { }
 

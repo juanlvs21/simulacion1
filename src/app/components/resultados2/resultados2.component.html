@@ -3,7 +3,7 @@
         <div class="card">
             <div class="card-body">
                 <div class="text-left" style="float:left">
-                    <button class="btn btn-outline-danger" [routerLink]="['/resultados']">Atras</button>
+                    <button class="btn btn-outline-danger" [routerLink]="['/resultados3']">Atras</button>
                     <button class="btn btn-outline-success" [routerLink]="['/metodos']">Cambiar método</button>
                 </div>
                 <div class="text-right" style="float:right">
@@ -45,16 +45,16 @@
                                 <table class="table table-sm table-bordered">
                                     <thead class="thead-dark">
                                         <tr>
-                                            <th scope="col">Horas Totales</th>
+                                            <!-- <th scope="col">Horas Totales</th> -->
                                             <!-- <th scope="col">Horas Contrato (8h/día)</th> -->
                                             <th scope="col">Horas Extras</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <th> {{rs.horastotal | number:'2.0-1'}} </th>
+                                            <!-- <th> {{rs.horastotal | number:'2.0-2'}} </th> -->
                                             <!-- <th> {{rs.horasdia | number:'2.0-1'}} </th> -->
-                                            <th style="background: #5070c9 ;"> {{rs.horasextra | number:'2.0-1'}} </th>
+                                            <th style="background: #5070c9 ;"> {{rs.horasextra | number:'2.0-2'}} </th>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -65,7 +65,7 @@
                                 <b>¿Cuál fue el costo generado por pago a las cuadrillas que tiene que cancelar la compañía?</b>
                             </h6>
                         </div>
-                        <div class="col-md-6 mt-2">
+                        <!-- <div class="col-md-6 mt-2">
                             <div class="col-md-12">
                                 <div class="text-center">
                                     <p><b>Pago Contrato</b></p>
@@ -110,25 +110,25 @@
                                     </tbody>
                                 </table>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="col-md-12">
-                            <div class="col-md-12">
+                            <div class="col-md-6 offset-md-3 text-center">
                                 <div class="text-center">
-                                    <p><b>Pago Total</b></p>
+                                    <!-- <p><b>Pago Total</b></p> -->
                                 </div>
                                 <table class="table table-sm table-bordered">
                                     <thead class="thead-dark">
                                         <tr>
-                                            <th scope="col">Operador Elevador Total</th>
-                                            <th scope="col">Obreros Total</th>
+                                            <!-- <th scope="col">Operador Elevador Total</th>
+                                            <th scope="col">Obreros Total</th> -->
                                             <th scope="col">Pago Total</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <th> {{rs.ht.operador | number:'.0-2'}} </th>
-                                            <th> {{rs.ht.obrero | number:'.0-2'}} </th>
-                                            <th style="background: #5070c9 ;"> {{rs.ht.total | number:'0.0-2'}} </th>
+                                            <!-- <th> {{rs.ht.operador | number:'.0-2'}} </th>
+                                            <th> {{rs.ht.obrero | number:'.0-2'}} </th> -->
+                                            <th style="background: #5070c9 ;"> {{rs.pagototal | number:'6.0-2'}} </th>
                                         </tr>
                                     </tbody>
                                 </table>
